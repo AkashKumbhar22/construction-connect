@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ConstructHub</title>
+
+    <!-- CSS LINK (THIS IS CORRECT) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">Construct<span>Hub</span></div>
+    <nav class="menu">
+        <a href="/">Home</a>
+        <a href="/search">Search Workers</a>
+        <a href="/worker/register">Register Worker</a>
+        <a href="/login" class="btn-nav">Login</a>
+    </nav>
+</header>
+
+<main class="container">
+    {% block content %}{% endblock %}
+</main>
+
+</body>
+</html>

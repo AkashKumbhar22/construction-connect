@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block page_title %}Worker Registration{% endblock %}
+
+{% block content %}
+<div class="card">
+    <form method="POST" class="form-grid">
+        <input type="text" name="service" placeholder="Service">
+        <input type="text" name="city" placeholder="City">
+        <input type="text" name="areas" placeholder="Areas">
+        <input type="number" name="experience" placeholder="Experience (years)">
+        <input type="text" name="phone" placeholder="Phone Number">
+        <button class="btn full">Register</button>
+    </form>
+</div>
+{% endblock %}

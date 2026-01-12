@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block page_title %}Search Workers{% endblock %}
+
+{% block content %}
+<div class="card">
+    <form method="POST" class="form">
+        <input type="text" name="service" placeholder="Service (Electrician)">
+        <input type="text" name="city" placeholder="City">
+        <button class="btn">Search</button>
+    </form>
+</div>
+
+<div class="results">
+    {% for worker in workers %}
+    <div class="worker-card">
+        <h4>{{ worker.service }}</h4>
+        <p><strong>City:</strong> {{ worker.city }}</p>
+        <p><strong>Areas:</strong> {{ worker.areas }}</p>
+        <p><strong>Experience:</strong> {{ worker.experience }} years</p>
+        <p><strong>Phone:</strong> {{ worker.phone }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
